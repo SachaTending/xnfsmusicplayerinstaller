@@ -167,9 +167,7 @@ int DialogInterface_ShowNButtons_Custom(unsigned int NumberOfButtons, const char
 	vsprintf(TheDialogConfig.MsgBuffer, format, Args);
 	va_end(Args);
 
-	Result = DialogInterface_ShowDialog(&TheDialogConfig);
-
-	return Result;
+	return DialogInterface_ShowDialog_Custom(&TheDialogConfig, Button1Text, Button2Text, Button3Text);
 }
 
 #pragma warning(disable:4100)
