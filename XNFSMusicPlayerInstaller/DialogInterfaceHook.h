@@ -139,7 +139,6 @@ int DialogInterface_ShowNButtons(unsigned int NumberOfButtons, const char* Type,
 int DialogInterface_ShowNButtons_Custom(unsigned int NumberOfButtons, const char* Type, int eDialogTitle, int eDialogFirstButtons, unsigned int Button1Hash, unsigned int Button2Hash, unsigned int Button3Hash, const char* Button1Text, const char* Button2Text, const char* Button3Text, const char* format, ...)
 {
 	va_list Args;
-	int Result;
 	feDialogConfig TheDialogConfig = { 0 };
 
 	TheDialogConfig.Type = Type;
