@@ -149,7 +149,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DialogInterfaceHook.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="XNFSMusicPlayerInstaller.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="XNFSMusicPlayerInstaller.cpp" />
