@@ -465,7 +465,10 @@ BOOL APIENTRY DllMain(HMODULE /*hModule*/, DWORD reason, LPVOID /*lpReserved*/)
 		Init();
 		if (!bInstallerCompleted)
 		{
-			*(unsigned int*)BOOTFLOW_ADDRESS = SOMEBROKENFNG_ADDRESS;
+			*(unsigned int*)BOOTFLOW1_ADDRESS = SOMEBROKENFNG_ADDRESS;
+			*(unsigned int*)BOOTFLOW2_ADDRESS = SOMEBROKENFNG_ADDRESS;
+			*(unsigned int*)BOOTFLOW3_ADDRESS = SOMEBROKENFNG_ADDRESS;
+			*(unsigned int*)BOOTFLOW4_ADDRESS = SOMEBROKENFNG_ADDRESS;
 			injector::MakeCALL(QUEUEGAMEMESSAGEHOOK_ADDRESS, QueueGameMessageHook, true);
 			CreateThread(0, 0, (LPTHREAD_START_ROUTINE)&InstallerStateManager, NULL, 0, NULL);
 		}
